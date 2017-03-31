@@ -18,6 +18,9 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.add_dependency 'thor'
+  gem.add_dependency 'google-cloud-speech'
+  gem.add_dependency 'oj'
+  gem.add_dependency 'parallel'
 
   gem.add_development_dependency 'bundler', '~> 1.14.6'
   gem.add_development_dependency 'pry', '~> 0.10.1'
