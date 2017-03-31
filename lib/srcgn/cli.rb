@@ -15,13 +15,13 @@ module Srcgn
       @core = Core.new
     end
 
-    desc "recognize", "recognize"
-    option :language, aliases: '-l', type: :string, desc: 'language'
-    option :max_alternatives, aliases: '--max_alternatives', type: :numeric, desc: 'max_alternatives'
+    desc "-r", "recognize music file."
+    option :language, aliases: '-l', required: true, type: :string, desc: 'language'
+    option :max_alternatives, aliases: '--max_alternatives', type: :numeric, desc: 'max alternatives'
     option :flac_files, aliases: '-f', type: :array, default: [], desc: 'flac file'
     option :mp3_files, aliases: '-m', type: :array, default: [], desc: 'mp3 file'
-    option :format, type: :string, default: 'txt', enum: ['json', 'txt'],desc: 'mp3 file'
-    option :output, aliases: '-o', type: :string, default: 'stdout', enum: ['stdout', 'file'],desc: 'output'
+    option :format, type: :string, default: 'txt', enum: ['json', 'txt'],desc: 'output format'
+    option :output, aliases: '-o', type: :string, default: 'stdout', enum: ['stdout', 'file'], desc: 'output to'
     def recognize
       mp3_files = Util.paths_with_globs(options[:mp3_files])
       flac_files = Util.paths_with_globs(options[:flac_files])
