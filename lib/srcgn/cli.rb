@@ -1,5 +1,5 @@
 require "thor"
-require "logger"
+require 'oj'
 
 module Srcgn
   class CLI < Thor
@@ -11,7 +11,6 @@ module Srcgn
     def initialize(args = [], options = {}, config = {})
       super(args, options, config)
       @class_options = config[:shell].base.options
-      @log = Logger.new(STDERR)
       @core = Core.new
     end
 
@@ -33,7 +32,6 @@ module Srcgn
       config = @core.get_config(
         language: options[:language]
       )
-      @log.info("config => #{config}")
       @core.recognize_parallel(config, flac_files.flatten, options[:max_alternatives], options[:format]) { |output, results|
         output_proc(output, results)
       }

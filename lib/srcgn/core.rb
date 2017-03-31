@@ -1,6 +1,5 @@
 require 'logger'
 require 'parallel'
-require 'oj'
 require "google/cloud/speech"
 
 module Srcgn
@@ -47,11 +46,13 @@ module Srcgn
     end
 
     def get_config(encoding: :flac, sample_rate: SAMPLE_RATE, language: :en, max_alternatives: nil)
-      {
+      config = {
         language: language,
         encoding: encoding,
         sample_rate: sample_rate
       }
+      @log.info("config => #{config}")
+      config
     end
   end
 end
