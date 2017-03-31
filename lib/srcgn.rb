@@ -1,0 +1,7 @@
+require 'srcgn/version'
+require 'srcgn/constants'
+require 'srcgn/core'
+require 'srcgn/util'
+require 'srcgn/mp3splt'
+require 'srcgn/sox'
+require 'srcgn/cli'
