@@ -1,31 +1,54 @@
-# srcgn [![Build Status](https://secure.travis-ci.org/toyama0919/srcgn.png?branch=master)](http://travis-ci.org/toyama0919/srcgn)
+# srcgn
 
-TODO: Summary
-
-TODO: Description
+Make transcript by music file. use Google speech api.
 
 ## Examples
 
-    $ srcgn sample
-    #=> hoge
+### flac file
+```
+$ srcgn -l ja -f test.flac --format json
+```
+
+### mp3 file
+```
+$ srcgn -l ja -f test.mp3 --format json
+```
 
 ## Installation
 
+require sox and mp3splt.
+
+#### MAC
+```
+$ brew install mp3splt
+$ brew install sox --with-lame --with-flac --with-libvorbis
+```
+
+#### Linux
+```
+$ sudo yum -y install sox
+$ sudo yum -y install mp3splt
+```
+
+### Gem install
+
 Add this line to your application's Gemfile:
 
-    gem 'srcgn'
+```
+gem 'srcgn'
+```
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install srcgn
-
-## Synopsis
-
-    $ srcgn
+```
+$ gem install srcgn
+```
 
 ## Contributing
 
