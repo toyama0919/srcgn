@@ -5,8 +5,8 @@ require File.expand_path('../lib/srcgn/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = "srcgn"
   gem.version       = Srcgn::VERSION
-  gem.summary       = %q{Summary}
-  gem.description   = %q{Description}
+  gem.summary       = %q{Make transcript by music file. use Google speech api.}
+  gem.description   = %q{Make transcript by music file. use Google speech api.}
   gem.license       = "MIT"
   gem.authors       = ["toyama0919"]
   gem.email         = "toyama0919@gmail.com"
@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'thor', '~> 0.19.4'
+  gem.add_dependency 'thor'
 
   gem.add_development_dependency 'bundler', '~> 1.14.6'
   gem.add_development_dependency 'pry', '~> 0.10.1'
