@@ -14,6 +14,12 @@ $ srcgn -l ja -f test.flac --format json
 $ srcgn -l ja -f test.mp3 --format json
 ```
 
+## Settings Environment(Example)
+```
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcp/credentials.json
+export GOOGLE_CLOUD_PROJECT="MY-PROJECT"
+```
+
 ## Installation
 
 require sox and mp3splt.
